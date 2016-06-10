@@ -28,6 +28,8 @@ defmodule RomanTest do
     Enum.each(data, fn {i, r} ->
       assert r == Roman.to_roman(i)
       assert i == Roman.from_roman(r)
+      assert r == Roman.to_roman_macro(i)
+      assert r == Roman.to_roman_2step(i)
     end)
   end
 end
